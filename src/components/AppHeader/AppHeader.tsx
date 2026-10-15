@@ -1,6 +1,7 @@
 import type { ReactNode } from "react";
 import { cx } from "../../internal/cx";
-import { Icon, type IconName } from "../Icon/Icon";
+import { Icon } from "../Icon/Icon";
+import type { IconGlyph } from "../Icon/icons";
 import { Link } from "../Link/Link";
 import { type Connection, LiveIndicator } from "../LiveIndicator/LiveIndicator";
 
@@ -14,7 +15,7 @@ export interface AppHeaderProps {
   /** The interface's name. */
   title: string;
   /** An icon before the name. */
-  icon?: IconName;
+  icon?: IconGlyph;
   /** Where the page sits, the current page last. */
   breadcrumb?: readonly BreadcrumbItem[];
   /** Shows the live indicator when set. */
@@ -29,7 +30,7 @@ export function AppHeader({ title, icon, breadcrumb, connection, actions, classN
   return (
     <header className={cx("cpds-app-header", className)}>
       <div className="cpds-app-header__title">
-        {icon !== undefined && <Icon name={icon} size="lg" />}
+        {icon !== undefined && <Icon icon={icon} size="lg" />}
         <span>{title}</span>
       </div>
       {breadcrumb !== undefined && breadcrumb.length > 0 && (

@@ -16,7 +16,9 @@ Import the stylesheet once, at the entry of the interface, then the components:
 
 ```tsx
 import "@cocofly59/claude-plugin-design-system/styles.css";
-import { Button } from "@cocofly59/claude-plugin-design-system";
+import { Button, iconSend } from "@cocofly59/claude-plugin-design-system";
+
+<Button variant="primary" icon={iconSend}>Send</Button>;
 ```
 
 The theme follows the system's light or dark preference; `data-theme="light"` or `data-theme="dark"` on any element forces one theme on its subtree. Style the interface's own parts with the semantic tokens the stylesheet defines (`var(--color-…)`, `var(--space-…)`, `var(--radius-…)`), never with literal values.
@@ -25,6 +27,7 @@ The theme follows the system's light or dark preference; `data-theme="light"` or
 
 - **Tokens**: surfaces, lines, text, accent and tones (neutral, info, accent, waiting, success, danger) in both themes; type, space, shapes and sizes.
 - **Base components**: `Button` (primary, secondary, ghost; icon, loading), `IconButton`, `Link`, `TextField`, `TextArea`, `Radio`, `Checkbox`, `Icon`.
+- **Icons**: a closed set from Lucide, one export per icon (`iconSend`, `iconPencil`, `iconClock`…), so that a bundle keeps only the icons it imports.
 - **Patterns**: `Card`, `Badge`, `StatusBadge`, `CollapsibleRow`, `AppHeader`, `LiveIndicator`, `Banner`, `Figure`.
 
 ## License

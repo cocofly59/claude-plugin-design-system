@@ -1,6 +1,32 @@
 // Public entry of the package. The stylesheet is imported separately: "@cocofly59/claude-plugin-design-system/styles.css".
 export type { Tone } from "./internal/tone";
-export { Icon, iconNames, type IconName, type IconProps, type IconSize } from "./components/Icon/Icon";
+export { Icon, type IconProps, type IconSize } from "./components/Icon/Icon";
+export {
+  type IconGlyph,
+  iconArrowLeft,
+  iconArrowRight,
+  iconCheck,
+  iconChevronDown,
+  iconChevronRight,
+  iconCircleAlert,
+  iconCircleCheck,
+  iconClock,
+  iconCopy,
+  iconDiagram,
+  iconExternalLink,
+  iconHistory,
+  iconInfo,
+  iconLoader,
+  iconMessage,
+  iconNotepad,
+  iconPencil,
+  iconPlus,
+  iconRefresh,
+  iconSearch,
+  iconSend,
+  iconTriangleAlert,
+  iconX,
+} from "./components/Icon/icons";
 export { Button, type ButtonProps, type ButtonVariant } from "./components/Button/Button";
 export { IconButton, type IconButtonProps, type IconButtonVariant } from "./components/IconButton/IconButton";
 export { Link, type LinkProps, type LinkVariant } from "./components/Link/Link";

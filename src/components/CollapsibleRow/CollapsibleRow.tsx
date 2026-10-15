@@ -1,6 +1,7 @@
 import { type ReactNode, useId, useState } from "react";
 import { cx } from "../../internal/cx";
 import { Icon } from "../Icon/Icon";
+import { iconChevronRight } from "../Icon/icons";
 
 export type CollapsibleRowVariant = "card" | "plain";
 
@@ -30,7 +31,7 @@ export function CollapsibleRow({ title, meta, variant = "card", expanded, defaul
   return (
     <div className={cx("cpds-collapsible", `cpds-collapsible--${variant}`, className)} data-expanded={open}>
       <button type="button" className="cpds-collapsible__trigger" aria-expanded={open} aria-controls={contentId} onClick={toggle}>
-        <Icon name="chevron-right" size="sm" className="cpds-collapsible__chevron" />
+        <Icon icon={iconChevronRight} size="sm" className="cpds-collapsible__chevron" />
         <span className="cpds-collapsible__title">{title}</span>
         {meta !== undefined && <span className="cpds-collapsible__meta">{meta}</span>}
       </button>
