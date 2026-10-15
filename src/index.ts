@@ -1,4 +1,4 @@
-// Public entry of the package. The stylesheet is imported separately: "@cocofly59/claude-plugin-design-system/styles.css".
+// Public entry of the package. The stylesheet is imported separately: "@cawin/claude-plugin-design-system/styles.css".
 export type { Tone } from "./internal/tone";
 export { Icon, type IconProps, type IconSize } from "./components/Icon/Icon";
 export {

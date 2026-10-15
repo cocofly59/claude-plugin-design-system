@@ -1,6 +1,6 @@
 {
-  "name": "@cocofly59/claude-plugin-design-system",
-  "version": "0.1.0",
+  "name": "@cawin/claude-plugin-design-system",
+  "version": "0.1.1",
   "description": "Design tokens, base components and patterns for the web interfaces of Claude Code plugins.",
   "license": "MIT",
   "type": "module",

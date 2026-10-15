@@ -5,7 +5,7 @@ Design tokens, base components and patterns for the web interfaces of Claude Cod
 ## Install
 
 ```bash
-npm install --save-exact @cocofly59/claude-plugin-design-system
+npm install --save-exact @cawin/claude-plugin-design-system
 ```
 
 `react` and `react-dom` are peer dependencies.
@@ -15,8 +15,8 @@ npm install --save-exact @cocofly59/claude-plugin-design-system
 Import the stylesheet once, at the entry of the interface, then the components:
 
 ```tsx
-import "@cocofly59/claude-plugin-design-system/styles.css";
-import { Button, iconSend } from "@cocofly59/claude-plugin-design-system";
+import "@cawin/claude-plugin-design-system/styles.css";
+import { Button, iconSend } from "@cawin/claude-plugin-design-system";
 
 <Button variant="primary" icon={iconSend}>Send</Button>;
 ```
