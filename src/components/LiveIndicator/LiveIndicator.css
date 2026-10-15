@@ -1,0 +1,24 @@
+.cpds-live {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-1-5);
+  color: var(--color-text-muted);
+  font-size: var(--font-size-sm);
+  white-space: nowrap;
+}
+
+.cpds-live__dot {
+  width: var(--size-indicator);
+  height: var(--size-indicator);
+  border-radius: var(--radius-pill);
+}
+
+.cpds-live--live .cpds-live__dot {
+  background-color: var(--color-success-indicator);
+}
+
+.cpds-live--offline .cpds-live__dot {
+  box-sizing: border-box;
+  border: var(--border-width-strong) solid var(--color-text-muted);
+  background-color: transparent;
+}

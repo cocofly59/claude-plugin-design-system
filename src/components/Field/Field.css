@@ -1,0 +1,67 @@
+.cpds-field {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1-5);
+}
+
+.cpds-field__label {
+  color: var(--color-text-muted);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-medium);
+}
+
+.cpds-field__hint,
+.cpds-field__error {
+  margin: 0;
+  font-size: var(--font-size-sm);
+}
+
+.cpds-field__hint {
+  color: var(--color-text-muted);
+}
+
+.cpds-field__error {
+  display: flex;
+  align-items: center;
+  gap: var(--space-1-5);
+  color: var(--color-danger-text);
+}
+
+/* The text input and the text area share one look. */
+.cpds-input {
+  box-sizing: border-box;
+  width: 100%;
+  min-height: var(--size-touch);
+  margin: 0;
+  padding: var(--space-2-5) var(--space-3);
+  border: var(--border-width) solid var(--color-border-control);
+  border-radius: var(--radius-control);
+  background-color: var(--color-surface);
+  color: var(--color-text);
+  font-family: inherit;
+  font-size: var(--font-size-base);
+  line-height: var(--line-height-body);
+}
+
+.cpds-input::placeholder {
+  color: var(--color-text-muted);
+}
+
+.cpds-input:focus-visible {
+  border-color: var(--color-accent);
+  outline: var(--focus-ring-width) solid var(--color-focus);
+  outline-offset: var(--focus-ring-offset);
+}
+
+.cpds-input[aria-invalid="true"] {
+  border-color: var(--color-danger-border);
+}
+
+.cpds-input:disabled {
+  opacity: var(--opacity-disabled);
+  cursor: not-allowed;
+}
+
+textarea.cpds-input {
+  resize: vertical;
+}

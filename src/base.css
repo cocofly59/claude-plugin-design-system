@@ -1,0 +1,14 @@
+/* Base of every interface: the ground, the text color and the type of the page, and of any subtree forced to a theme. */
+:root,
+[data-theme] {
+  background-color: var(--color-bg);
+  color: var(--color-text);
+}
+
+:root {
+  font-family: var(--font-sans);
+  font-size: var(--font-size-base);
+  line-height: var(--line-height-body);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}

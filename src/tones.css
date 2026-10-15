@@ -1,0 +1,30 @@
+/* Tones, shared by badges, status badges and banners: a background and the text drawn on it. */
+.cpds-tone--neutral {
+  background-color: var(--color-neutral-bg);
+  color: var(--color-neutral-text);
+}
+
+.cpds-tone--info {
+  background-color: var(--color-info-bg);
+  color: var(--color-info-text);
+}
+
+.cpds-tone--accent {
+  background-color: var(--color-accent-bg);
+  color: var(--color-accent-bg-text);
+}
+
+.cpds-tone--waiting {
+  background-color: var(--color-waiting-bg);
+  color: var(--color-waiting-text);
+}
+
+.cpds-tone--success {
+  background-color: var(--color-success-bg);
+  color: var(--color-success-text);
+}
+
+.cpds-tone--danger {
+  background-color: var(--color-danger-bg);
+  color: var(--color-danger-text);
+}

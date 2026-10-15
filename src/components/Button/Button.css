@@ -1,0 +1,79 @@
+.cpds-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-2);
+  min-height: var(--size-touch);
+  padding: 0 var(--space-4);
+  border: var(--border-width) solid transparent;
+  border-radius: var(--radius-control);
+  background-color: transparent;
+  color: var(--color-text);
+  font-family: inherit;
+  font-size: var(--font-size-md);
+  font-weight: var(--font-weight-medium);
+  line-height: var(--line-height-control);
+  text-decoration: none;
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+.cpds-button:focus-visible {
+  outline: var(--focus-ring-width) solid var(--color-focus);
+  outline-offset: var(--focus-ring-offset);
+}
+
+.cpds-button:disabled {
+  opacity: var(--opacity-disabled);
+  cursor: not-allowed;
+}
+
+.cpds-button[data-loading] {
+  cursor: progress;
+}
+
+.cpds-button__spinner {
+  animation: cpds-spin 0.9s linear infinite;
+}
+
+@keyframes cpds-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .cpds-button__spinner {
+    animation: none;
+  }
+}
+
+.cpds-button--primary {
+  padding: 0 var(--space-5);
+  background-color: var(--color-accent);
+  color: var(--color-on-accent);
+  font-weight: var(--font-weight-semibold);
+}
+
+.cpds-button--primary:hover:not(:disabled, [data-loading]) {
+  background-color: var(--color-accent-hover);
+}
+
+.cpds-button--secondary {
+  border-color: var(--color-border-strong);
+  background-color: var(--color-surface);
+}
+
+.cpds-button--secondary:hover:not(:disabled, [data-loading]) {
+  background-color: var(--color-surface-sunken);
+}
+
+.cpds-button--ghost {
+  padding: 0 var(--space-3);
+  color: var(--color-accent-text);
+}
+
+.cpds-button--ghost:hover:not(:disabled, [data-loading]) {
+  background-color: var(--color-accent-subtle);
+  color: var(--color-accent-text-hover);
+}

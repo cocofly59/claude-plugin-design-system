@@ -1,0 +1,31 @@
+.cpds-link {
+  border-radius: var(--radius-control);
+  text-decoration: none;
+  text-underline-offset: 0.2em;
+}
+
+.cpds-link:hover {
+  text-decoration: underline;
+}
+
+.cpds-link:focus-visible {
+  outline: var(--focus-ring-width) solid var(--color-focus);
+  outline-offset: var(--focus-ring-offset);
+}
+
+.cpds-link--accent {
+  color: var(--color-accent-text);
+  font-weight: var(--font-weight-medium);
+}
+
+.cpds-link--accent:hover {
+  color: var(--color-accent-text-hover);
+}
+
+.cpds-link--muted {
+  color: var(--color-text-muted);
+}
+
+.cpds-link--muted:hover {
+  color: var(--color-text);
+}

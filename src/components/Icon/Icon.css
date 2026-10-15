@@ -1,0 +1,20 @@
+.cpds-icon {
+  flex: none;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.cpds-icon--sm {
+  width: var(--size-icon-sm);
+  height: var(--size-icon-sm);
+}
+
+.cpds-icon--md {
+  width: var(--size-icon-md);
+  height: var(--size-icon-md);
+}
+
+.cpds-icon--lg {
+  width: var(--size-icon-lg);
+  height: var(--size-icon-lg);
+}
