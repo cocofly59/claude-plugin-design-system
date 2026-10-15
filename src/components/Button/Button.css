@@ -2,7 +2,6 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  gap: var(--space-2);
   min-height: var(--size-touch);
   padding: 0 var(--space-4);
   border: var(--border-width) solid transparent;
@@ -32,8 +31,31 @@
   cursor: progress;
 }
 
+/* The icon or spinner before the label: a track that opens and closes instead of appearing at once. */
+.cpds-button__lead {
+  display: grid;
+  grid-template-columns: 0fr;
+  margin-inline-end: 0;
+  transition:
+    grid-template-columns var(--duration-fast) var(--easing-standard),
+    margin-inline-end var(--duration-fast) var(--easing-standard);
+}
+
+.cpds-button__lead[data-open] {
+  grid-template-columns: 1fr;
+  margin-inline-end: var(--space-2);
+}
+
+.cpds-button__lead-inner {
+  display: flex;
+  min-width: 0;
+  overflow: hidden;
+}
+
 .cpds-button__spinner {
-  animation: cpds-spin 0.9s linear infinite;
+  animation:
+    cpds-spin 0.9s linear infinite,
+    cpds-fade-in var(--duration-fast) var(--easing-standard);
 }
 
 @keyframes cpds-spin {
@@ -42,7 +64,17 @@
   }
 }
 
+@keyframes cpds-fade-in {
+  from {
+    opacity: 0;
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
+  .cpds-button__lead {
+    transition: none;
+  }
+
   .cpds-button__spinner {
     animation: none;
   }

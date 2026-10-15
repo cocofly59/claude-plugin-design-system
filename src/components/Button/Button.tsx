@@ -15,6 +15,8 @@ export interface ButtonProps extends Omit<ComponentProps<"button">, "children"> 
 }
 
 export function Button({ variant = "secondary", icon, loading = false, type = "button", className, onClick, children, ...rest }: ButtonProps) {
+  // The slot before the label opens and closes with a transition, so that the button never jumps in width.
+  const lead = loading ? <Icon name="loader" className="cpds-button__spinner" /> : icon === undefined ? null : <Icon name={icon} />;
   const click = (event: MouseEvent<HTMLButtonElement>) => {
     if (loading) {
       event.preventDefault();
@@ -32,7 +34,9 @@ export function Button({ variant = "secondary", icon, loading = false, type = "b
       onClick={click}
       {...rest}
     >
-      {loading ? <Icon name="loader" className="cpds-button__spinner" /> : icon !== undefined && <Icon name={icon} />}
+      <span className="cpds-button__lead" data-open={lead !== null || undefined}>
+        <span className="cpds-button__lead-inner">{lead}</span>
+      </span>
       <span>{children}</span>
     </button>
   );

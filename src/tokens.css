@@ -209,4 +209,8 @@
   --opacity-disabled: 0.5;
   --focus-ring-width: var(--palette-size-2);
   --focus-ring-offset: var(--palette-size-2);
+
+  /* Motion */
+  --duration-fast: 160ms;
+  --easing-standard: cubic-bezier(0.2, 0, 0, 1);
 }

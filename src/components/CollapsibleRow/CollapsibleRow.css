@@ -21,7 +21,7 @@
 }
 
 .cpds-collapsible__chevron {
-  transition: transform 120ms ease-out;
+  transition: transform var(--duration-fast) var(--easing-standard);
 }
 
 .cpds-collapsible[data-expanded="true"] .cpds-collapsible__chevron {
