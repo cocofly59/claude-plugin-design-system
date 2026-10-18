@@ -42,3 +42,4 @@ export { LiveIndicator, type Connection, type LiveIndicatorProps } from "./compo
 export { AppHeader, type AppHeaderProps, type BreadcrumbItem } from "./components/AppHeader/AppHeader";
 export { Banner, type BannerProps, type BannerTone, type BannerVariant } from "./components/Banner/Banner";
 export { Figure, type FigureProps } from "./components/Figure/Figure";
+export { Prose, type ProseDensity, type ProseProps } from "./components/Prose/Prose";

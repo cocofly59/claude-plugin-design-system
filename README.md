@@ -28,7 +28,8 @@ The theme follows the system's light or dark preference; `data-theme="light"` or
 - **Tokens**: surfaces, lines, text, accent and tones (neutral, info, accent, waiting, success, danger) in both themes; type, space, shapes and sizes.
 - **Base components**: `Button` (primary, secondary, ghost; icon, loading), `IconButton`, `Link`, `TextField`, `TextArea`, `Radio`, `Checkbox`, `Icon`.
 - **Icons**: a closed set from Lucide, one export per icon (`iconSend`, `iconPencil`, `iconClock`…), so that a bundle keeps only the icons it imports.
-- **Patterns**: `Card`, `Badge`, `StatusBadge`, `CollapsibleRow`, `AppHeader`, `LiveIndicator`, `Banner`, `Figure`.
+- **Patterns**: `Card`, `Badge`, `StatusBadge`, `CollapsibleRow`, `AppHeader`, `LiveIndicator`, `Banner`, `Figure`, `Prose`.
+- **Rendered text**: `Prose` styles rich text an interface has already rendered, such as Markdown: paragraphs, headings, lists, code, tables, quotes and strikethrough. `density="block"` holds a long text; `density="inline"` holds a one-line text inside a row, such as a radio label, without block margins. Make its links with `Link`, for instance by mapping the renderer's `a` element to it.
 
 ## License
 

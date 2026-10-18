@@ -1,0 +1,140 @@
+.cpds-prose {
+  color: var(--color-text);
+  overflow-wrap: break-word;
+}
+
+.cpds-prose--block {
+  display: block;
+  line-height: var(--line-height-body);
+}
+
+.cpds-prose--inline {
+  display: inline;
+}
+
+/* Blocks */
+
+.cpds-prose--block :is(p, ul, ol, pre, table, blockquote, hr) {
+  margin: 0 0 var(--space-4);
+}
+
+.cpds-prose.cpds-prose--block > :first-child {
+  margin-top: 0;
+}
+
+.cpds-prose.cpds-prose--block > :last-child {
+  margin-bottom: 0;
+}
+
+/* Headings: every level stays under the size of a card's title. */
+
+.cpds-prose :is(h1, h2, h3, h4, h5, h6) {
+  margin: var(--space-6) 0 var(--space-2);
+  font-weight: var(--font-weight-semibold);
+  line-height: var(--line-height-heading);
+}
+
+.cpds-prose h1 {
+  font-size: var(--font-size-lg);
+}
+
+.cpds-prose h2 {
+  font-size: var(--font-size-base);
+}
+
+.cpds-prose h3 {
+  font-size: var(--font-size-md);
+}
+
+.cpds-prose :is(h4, h5, h6) {
+  color: var(--color-text-muted);
+  font-size: var(--font-size-xs);
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+/* Lists */
+
+.cpds-prose :is(ul, ol) {
+  padding-inline-start: var(--space-5);
+}
+
+.cpds-prose li + li {
+  margin-top: var(--space-1-5);
+}
+
+.cpds-prose--block li > :is(ul, ol) {
+  margin: var(--space-1-5) 0 0;
+}
+
+.cpds-prose li::marker {
+  color: var(--color-text-muted);
+}
+
+/* Code */
+
+.cpds-prose code {
+  padding: 0 var(--space-1);
+  border: var(--border-width) solid var(--color-border-subtle);
+  border-radius: var(--radius-control);
+  background-color: var(--color-surface-subtle);
+  font-family: var(--font-mono);
+  font-size: var(--font-size-sm);
+}
+
+.cpds-prose pre {
+  overflow-x: auto;
+  padding: var(--space-3) var(--space-4);
+  border: var(--border-width) solid var(--color-border);
+  border-radius: var(--radius-control);
+  background-color: var(--color-surface-subtle);
+  font-size: var(--font-size-sm);
+  line-height: var(--line-height-body);
+}
+
+.cpds-prose pre code {
+  padding: 0;
+  border: 0;
+  background-color: transparent;
+}
+
+/* Tables */
+
+.cpds-prose table {
+  display: block;
+  max-width: 100%;
+  overflow-x: auto;
+  border-collapse: collapse;
+}
+
+.cpds-prose :is(th, td) {
+  padding: var(--space-2) var(--space-3);
+  border: var(--border-width) solid var(--color-border);
+  font-size: var(--font-size-md);
+  text-align: start;
+  vertical-align: top;
+}
+
+.cpds-prose th {
+  background-color: var(--color-surface-subtle);
+  font-weight: var(--font-weight-semibold);
+}
+
+/* Quotes, strikethrough, rules */
+
+.cpds-prose blockquote {
+  padding: var(--space-2) var(--space-4);
+  border-inline-start: var(--border-width-strong) solid var(--color-accent-border);
+  border-radius: 0 var(--radius-control) var(--radius-control) 0;
+  background-color: var(--color-surface-subtle);
+  color: var(--color-text-secondary);
+}
+
+.cpds-prose del {
+  color: var(--color-text-muted);
+}
+
+.cpds-prose hr {
+  border: 0;
+  border-top: var(--border-width) solid var(--color-border);
+}
