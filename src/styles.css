@@ -17,3 +17,13 @@
 @import "./components/Banner/Banner.css";
 @import "./components/Figure/Figure.css";
 @import "./components/Prose/Prose.css";
+@import "./components/VisuallyHidden/VisuallyHidden.css";
+@import "./components/StatusDot/StatusDot.css";
+@import "./components/ProgressBar/ProgressBar.css";
+@import "./components/FilterChip/FilterChip.css";
+@import "./components/SegmentedControl/SegmentedControl.css";
+@import "./components/Tabs/Tabs.css";
+@import "./components/ScrollArea/ScrollArea.css";
+@import "./components/PillButton/PillButton.css";
+@import "./components/ChangeBar/ChangeBar.css";
+@import "./components/TruncatedPath/TruncatedPath.css";

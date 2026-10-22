@@ -43,3 +43,14 @@ export { AppHeader, type AppHeaderProps, type BreadcrumbItem } from "./component
 export { Banner, type BannerProps, type BannerTone, type BannerVariant } from "./components/Banner/Banner";
 export { Figure, type FigureProps } from "./components/Figure/Figure";
 export { Prose, type ProseDensity, type ProseProps } from "./components/Prose/Prose";
+export { VisuallyHidden, type VisuallyHiddenProps } from "./components/VisuallyHidden/VisuallyHidden";
+export { StatusDot, type DotStatus, type StatusDotProps } from "./components/StatusDot/StatusDot";
+export { ProgressBar, type ProgressBarProps } from "./components/ProgressBar/ProgressBar";
+export { FilterChip, type FilterChipProps } from "./components/FilterChip/FilterChip";
+export { SegmentedControl, type SegmentedControlProps, type SwitchOption } from "./components/SegmentedControl/SegmentedControl";
+export { Tabs, type TabsProps } from "./components/Tabs/Tabs";
+export { ScrollArea, type ScrollAreaProps, type ScrollAxis } from "./components/ScrollArea/ScrollArea";
+export { PillButton, type PillButtonProps, type PillButtonVariant } from "./components/PillButton/PillButton";
+export { ChangeBar, type ChangeBarProps } from "./components/ChangeBar/ChangeBar";
+export { TruncatedPath, type TruncatedPathProps } from "./components/TruncatedPath/TruncatedPath";
+export { breakpoints, type Breakpoint } from "./breakpoints";

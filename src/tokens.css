@@ -53,8 +53,18 @@
   /* Amber: waiting for the user */
   --palette-amber-100: #fbefd9;
   --palette-amber-200: #f2c98a;
+  --palette-amber-500: #d4860f;
+  --palette-amber-400: #e7a43c;
   --palette-amber-800: #7a4206;
   --palette-amber-950: #3a2a12;
+
+  /* Teal: queued, waiting for its turn */
+  --palette-teal-100: #dff3f0;
+  --palette-teal-300: #85d6cc;
+  --palette-teal-400: #3fb3a7;
+  --palette-teal-600: #21877e;
+  --palette-teal-700: #17625c;
+  --palette-teal-950: #0f2f2c;
 
   /* Green: confirmed, saved, live */
   --palette-green-100: #e3f1e9;
@@ -97,6 +107,9 @@
   --palette-size-18: 18px;
   --palette-size-44: 44px;
   --palette-size-52: 52px;
+  --palette-size-56: 56px;
+  --palette-size-720: 720px;
+  --palette-size-1200: 1200px;
   --palette-size-pill: 999px;
 
   color-scheme: light dark;
@@ -149,10 +162,15 @@
   --color-neutral-text: light-dark(var(--palette-ink-700), var(--palette-night-300));
   --color-info-bg: light-dark(var(--palette-blue-100), var(--palette-blue-950));
   --color-info-text: light-dark(var(--palette-blue-700), var(--palette-blue-350));
+  --color-info-indicator: light-dark(var(--palette-blue-600), var(--palette-blue-550));
   --color-accent-bg: light-dark(var(--palette-blue-150), var(--palette-blue-900));
   --color-accent-bg-text: light-dark(var(--palette-blue-700), var(--palette-blue-350));
   --color-waiting-bg: light-dark(var(--palette-amber-100), var(--palette-amber-950));
   --color-waiting-text: light-dark(var(--palette-amber-800), var(--palette-amber-200));
+  --color-waiting-indicator: light-dark(var(--palette-amber-500), var(--palette-amber-400));
+  --color-queued-bg: light-dark(var(--palette-teal-100), var(--palette-teal-950));
+  --color-queued-text: light-dark(var(--palette-teal-700), var(--palette-teal-300));
+  --color-queued-indicator: light-dark(var(--palette-teal-600), var(--palette-teal-400));
   --color-success-bg: light-dark(var(--palette-green-100), var(--palette-green-950));
   --color-success-text: light-dark(var(--palette-green-700), var(--palette-green-300));
   --color-success-indicator: light-dark(var(--palette-green-600), var(--palette-green-500));
@@ -197,6 +215,7 @@
   --radius-pill: var(--palette-size-pill);
   --border-width: var(--palette-size-1);
   --border-width-strong: var(--palette-size-2);
+  --border-style-inactive: dashed;
 
   /* Sizes */
   --size-touch: var(--palette-size-44);
@@ -206,9 +225,15 @@
   --size-indicator: var(--palette-size-8);
   --size-choice: var(--palette-size-18);
   --size-row: var(--palette-size-52);
+  --size-progress: var(--palette-size-56);
   --opacity-disabled: 0.5;
   --focus-ring-width: var(--palette-size-2);
   --focus-ring-offset: var(--palette-size-2);
+
+  /* Breakpoints: the widths where a layout changes. Custom properties cannot drive media or container queries, so the
+     package also exports them as numbers (breakpoints.medium, breakpoints.wide). */
+  --breakpoint-medium: var(--palette-size-720);
+  --breakpoint-wide: var(--palette-size-1200);
 
   /* Motion */
   --duration-fast: 160ms;

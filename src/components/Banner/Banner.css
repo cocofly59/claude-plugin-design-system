@@ -34,3 +34,25 @@
 .cpds-banner--status.cpds-banner-tone--danger {
   color: var(--color-danger-text);
 }
+
+.cpds-banner__message {
+  flex: 1;
+  min-width: 0;
+}
+
+.cpds-banner__title {
+  font-weight: var(--font-weight-semibold);
+}
+
+/* Controls at the end: the banner tightens its padding so the buttons sit close to its edge. */
+.cpds-banner--with-controls {
+  padding-block: var(--space-1);
+  padding-inline-end: var(--space-1);
+}
+
+.cpds-banner__controls {
+  display: inline-flex;
+  flex-shrink: 0;
+  align-items: center;
+  gap: var(--space-1);
+}

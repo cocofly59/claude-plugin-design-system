@@ -1,4 +1,4 @@
-/* Tones, shared by badges, status badges and banners: a background and the text drawn on it. */
+/* Tones, shared by badges, status badges, banners, filter chips and pill buttons: a background and the text drawn on it. */
 .cpds-tone--neutral {
   background-color: var(--color-neutral-bg);
   color: var(--color-neutral-text);
@@ -12,6 +12,11 @@
 .cpds-tone--accent {
   background-color: var(--color-accent-bg);
   color: var(--color-accent-bg-text);
+}
+
+.cpds-tone--queued {
+  background-color: var(--color-queued-bg);
+  color: var(--color-queued-text);
 }
 
 .cpds-tone--waiting {

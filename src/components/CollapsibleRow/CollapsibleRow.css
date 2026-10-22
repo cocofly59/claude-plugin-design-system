@@ -75,8 +75,81 @@
   padding-top: var(--space-2);
 }
 
+/* A dense row of a list: separated from the next, its content sliding open below it. */
+.cpds-collapsible--row + .cpds-collapsible--row {
+  border-top: var(--border-width) solid var(--color-border-subtle);
+}
+
+.cpds-collapsible--row > .cpds-collapsible__trigger {
+  gap: var(--space-2-5);
+  padding: var(--space-2) var(--space-3);
+  font-size: var(--font-size-md);
+}
+
+.cpds-collapsible--row > .cpds-collapsible__trigger:hover {
+  background-color: var(--color-surface-subtle);
+}
+
+.cpds-collapsible--row > .cpds-collapsible__trigger:focus-visible {
+  outline-offset: calc(var(--focus-ring-width) * -1);
+}
+
+.cpds-collapsible--row .cpds-collapsible__chevron {
+  flex-shrink: 0;
+  color: var(--color-text-muted);
+}
+
+.cpds-collapsible__leading {
+  display: inline-flex;
+  flex-shrink: 0;
+}
+
+.cpds-collapsible--row .cpds-collapsible__title {
+  display: flex;
+  flex: 1;
+  min-width: 0;
+  font-weight: var(--font-weight-regular);
+}
+
+.cpds-collapsible--row .cpds-collapsible__meta {
+  display: inline-flex;
+  flex-shrink: 0;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+.cpds-collapsible--row > .cpds-collapsible__content {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows var(--duration-fast) var(--easing-standard);
+}
+
+.cpds-collapsible--row[data-expanded="true"] > .cpds-collapsible__content {
+  grid-template-rows: 1fr;
+}
+
+.cpds-collapsible__inner {
+  min-height: 0;
+  overflow: hidden;
+}
+
+.cpds-collapsible--row[data-expanded="true"] .cpds-collapsible__inner {
+  border-top: var(--border-width) solid var(--color-border-subtle);
+  background-color: var(--color-surface-subtle);
+}
+
+/* The current row of its list: tinted in the accent, whatever its variant. */
+.cpds-collapsible[data-selected] > .cpds-collapsible__trigger {
+  background-color: var(--color-accent-subtle);
+}
+
+.cpds-collapsible--card[data-selected] {
+  border-color: var(--color-accent-border);
+}
+
 @media (prefers-reduced-motion: reduce) {
-  .cpds-collapsible__chevron {
+  .cpds-collapsible__chevron,
+  .cpds-collapsible--row > .cpds-collapsible__content {
     transition: none;
   }
 }

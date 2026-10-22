@@ -1,0 +1,42 @@
+.cpds-status-dot {
+  display: inline-block;
+  flex-shrink: 0;
+  box-sizing: border-box;
+  width: var(--size-indicator);
+  height: var(--size-indicator);
+  border: var(--border-width-strong) solid transparent;
+  border-radius: var(--radius-pill);
+  vertical-align: middle;
+}
+
+.cpds-status-dot--info {
+  background-color: var(--color-info-indicator);
+}
+
+.cpds-status-dot--queued {
+  border-color: var(--color-queued-indicator);
+  background-color: var(--color-queued-bg);
+}
+
+.cpds-status-dot--waiting {
+  background-color: var(--color-waiting-indicator);
+}
+
+.cpds-status-dot--success {
+  background-color: var(--color-success-indicator);
+}
+
+.cpds-status-dot--danger {
+  background-color: var(--color-danger-border);
+}
+
+.cpds-status-dot--neutral {
+  border-color: var(--color-text-muted);
+  background-color: transparent;
+}
+
+.cpds-status-dot--inactive {
+  border-style: var(--border-style-inactive);
+  border-color: var(--color-border-control);
+  background-color: transparent;
+}

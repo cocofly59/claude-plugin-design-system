@@ -1,0 +1,62 @@
+.cpds-tabs {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+.cpds-tabs__list {
+  display: flex;
+  gap: var(--space-1);
+  overflow-x: auto;
+  border-bottom: var(--border-width) solid var(--color-border-subtle);
+}
+
+/* Every tab keeps one box whatever is selected: the selected one only changes its colors. */
+.cpds-tabs__tab {
+  flex: 1 1 0;
+  min-width: 0;
+  margin: 0;
+  padding: var(--space-2) var(--space-3);
+  border: 0;
+  border-bottom: var(--border-width-strong) solid transparent;
+  border-radius: var(--radius-control) var(--radius-control) 0 0;
+  background-color: transparent;
+  color: var(--color-text-secondary);
+  font-family: inherit;
+  font-size: var(--font-size-md);
+  font-weight: var(--font-weight-medium);
+  line-height: var(--line-height-control);
+  text-align: center;
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+.cpds-tabs__tab:hover {
+  color: var(--color-text);
+}
+
+.cpds-tabs__tab:focus-visible {
+  outline: var(--focus-ring-width) solid var(--color-focus);
+  outline-offset: calc(var(--focus-ring-width) * -1);
+}
+
+.cpds-tabs__tab[aria-selected="true"] {
+  border-bottom-color: var(--color-accent);
+  color: var(--color-accent-text);
+}
+
+/* The panels share one cell: the tallest sets its height, only the selected one shows. */
+.cpds-tabs__panels {
+  display: grid;
+}
+
+.cpds-tabs__panel {
+  grid-area: 1 / 1;
+  min-width: 0;
+  visibility: hidden;
+}
+
+/* inherit, never visible: a visible descendant would show through a hidden ancestor. */
+.cpds-tabs__panel[data-active] {
+  visibility: inherit;
+}

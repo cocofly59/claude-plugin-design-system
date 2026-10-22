@@ -1,0 +1,19 @@
+.cpds-change-bar {
+  display: inline-flex;
+  flex-shrink: 0;
+  gap: var(--border-width-strong);
+}
+
+.cpds-change-bar__cell {
+  width: var(--size-indicator);
+  height: var(--size-indicator);
+  background-color: var(--color-border);
+}
+
+.cpds-change-bar__cell[data-change="added"] {
+  background-color: var(--color-success-indicator);
+}
+
+.cpds-change-bar__cell[data-change="removed"] {
+  background-color: var(--color-danger-border);
+}

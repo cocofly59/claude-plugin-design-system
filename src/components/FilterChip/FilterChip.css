@@ -1,0 +1,39 @@
+.cpds-filter-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-1-5);
+  margin: 0;
+  padding: var(--space-1) var(--space-2-5);
+  border: var(--border-width) solid var(--color-border);
+  border-radius: var(--radius-pill);
+  font-family: inherit;
+  font-size: var(--font-size-sm);
+  line-height: var(--line-height-control);
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+/* Off: outlined on the surface. On: the tone class gives the background and the text. */
+.cpds-filter-chip[aria-pressed="false"] {
+  background-color: var(--color-surface);
+  color: var(--color-text-secondary);
+}
+
+.cpds-filter-chip[aria-pressed="false"]:hover {
+  border-color: var(--color-border-strong);
+}
+
+.cpds-filter-chip[aria-pressed="true"] {
+  border-color: transparent;
+}
+
+.cpds-filter-chip:focus-visible {
+  outline: var(--focus-ring-width) solid var(--color-focus);
+  outline-offset: var(--focus-ring-offset);
+}
+
+.cpds-filter-chip__count {
+  font-family: var(--font-mono);
+  font-weight: var(--font-weight-semibold);
+  font-variant-numeric: tabular-nums;
+}

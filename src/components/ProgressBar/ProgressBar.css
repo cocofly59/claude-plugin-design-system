@@ -1,0 +1,32 @@
+.cpds-progress {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-1-5);
+  color: var(--color-text-muted);
+  font-size: var(--font-size-xs);
+  font-variant-numeric: tabular-nums;
+  line-height: var(--line-height-control);
+  white-space: nowrap;
+}
+
+.cpds-progress__track {
+  display: block;
+  flex-shrink: 0;
+  width: var(--size-progress);
+  height: var(--space-1);
+  overflow: hidden;
+  border-radius: var(--radius-pill);
+  background-color: var(--color-border-subtle);
+}
+
+.cpds-progress__fill {
+  display: block;
+  width: calc(var(--cpds-progress-ratio) * 100%);
+  height: 100%;
+  border-radius: var(--radius-pill);
+  background-color: var(--color-info-indicator);
+}
+
+.cpds-progress[data-complete] .cpds-progress__fill {
+  background-color: var(--color-success-indicator);
+}

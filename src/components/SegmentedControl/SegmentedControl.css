@@ -1,0 +1,52 @@
+.cpds-segmented {
+  display: inline-flex;
+  box-sizing: border-box;
+  gap: var(--space-1);
+  padding: var(--space-1);
+  border: var(--border-width) solid var(--color-border-subtle);
+  border-radius: var(--radius-control);
+  background-color: var(--color-surface-sunken);
+}
+
+.cpds-segmented--full-width {
+  display: flex;
+  width: 100%;
+}
+
+.cpds-segmented__option {
+  margin: 0;
+  padding: var(--space-1-5) var(--space-3);
+  border: var(--border-width) solid transparent;
+  border-radius: var(--radius-control);
+  background-color: transparent;
+  color: var(--color-text-secondary);
+  font-family: inherit;
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-medium);
+  line-height: var(--line-height-control);
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+.cpds-segmented--full-width > .cpds-segmented__option {
+  flex: 1 1 0;
+  min-width: 0;
+  overflow: hidden;
+  text-align: center;
+  text-overflow: ellipsis;
+}
+
+.cpds-segmented__option:hover {
+  color: var(--color-text);
+}
+
+.cpds-segmented__option:focus-visible {
+  outline: var(--focus-ring-width) solid var(--color-focus);
+  outline-offset: var(--focus-ring-offset);
+}
+
+.cpds-segmented__option[aria-pressed="true"] {
+  border-color: var(--color-accent);
+  background-color: var(--color-accent);
+  color: var(--color-on-accent);
+}

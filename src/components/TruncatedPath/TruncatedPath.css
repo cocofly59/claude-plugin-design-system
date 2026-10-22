@@ -1,0 +1,24 @@
+.cpds-truncated-path {
+  display: flex;
+  min-width: 0;
+  font-family: var(--font-mono);
+  font-size: var(--font-size-sm);
+  white-space: nowrap;
+}
+
+/* The directory gives way first; the file name is cut only once the directory is gone. */
+.cpds-truncated-path__directory {
+  flex: 0 1 auto;
+  min-width: 0;
+  overflow: hidden;
+  color: var(--color-text-muted);
+  text-overflow: ellipsis;
+}
+
+.cpds-truncated-path__name {
+  flex: 0 0 auto;
+  max-width: 100%;
+  overflow: hidden;
+  font-weight: var(--font-weight-medium);
+  text-overflow: ellipsis;
+}

@@ -1,0 +1,9 @@
+/* Kept in the accessibility tree, out of sight and out of the layout. */
+.cpds-visually-hidden {
+  position: absolute;
+  width: var(--border-width);
+  height: var(--border-width);
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}

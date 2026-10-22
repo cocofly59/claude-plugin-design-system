@@ -1,0 +1,27 @@
+/* Fills what its container gives it and scrolls beyond; in a flex or grid column, it takes the space left. */
+.cpds-scroll-area {
+  flex: 1 1 auto;
+  min-width: 0;
+  min-height: 0;
+  max-height: 100%;
+  overscroll-behavior: contain;
+  scrollbar-color: var(--color-border-strong) transparent;
+  scrollbar-width: thin;
+}
+
+.cpds-scroll-area--vertical {
+  overflow: hidden auto;
+}
+
+.cpds-scroll-area--horizontal {
+  overflow: auto hidden;
+}
+
+.cpds-scroll-area--both {
+  overflow: auto;
+}
+
+.cpds-scroll-area:focus-visible {
+  outline: var(--focus-ring-width) solid var(--color-focus);
+  outline-offset: calc(var(--focus-ring-width) * -1);
+}
